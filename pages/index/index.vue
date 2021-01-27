@@ -78,9 +78,9 @@
 				var data = {};
 				var index = this.unmLenght - 1
 				data._id = this.list[index]._id;
-				data.name = 'DCloud',
-					data.subType = 'html 5+',
-					data.CDb = 'unicloud-test';
+				data.name = 'DCloud';
+				data.subType = 'html 5+';
+				data.CDb = 'unicloud-test';
 				data.createTime = Date.now()
 				this.$api.post('update', data).then(res => {
 					console.log(res)
@@ -99,6 +99,7 @@
 
 				var data = {}
 				data.limit = 50
+				data.CDb ='ger_data'
 				this.$api.get('get', data).then(res => {
 					uni.hideLoading()
 					console.log(res)
